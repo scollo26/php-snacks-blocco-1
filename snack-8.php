@@ -59,9 +59,7 @@ Poi con una select filtriamo i nostri prodotti per prezzo o per tipologia -->
                 }
             }       
             
-        } else{
-            $prodottoFiltrato = $products;
-        }   
+        } 
   ?> 
 
 
