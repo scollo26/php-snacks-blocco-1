@@ -44,18 +44,20 @@ Poi con una select filtriamo i nostri prodotti per prezzo o per tipologia -->
         ],
     ];
 
-        $prodottoFiltrato=[];
+        $prodottoFiltrato=$products;
 
         if(isset($_GET['prod']) !== false){
             $prod = $_GET['prod'];
             if($prod ==='all'){
                 $prodottoFiltrato = $products;
-            }
+            }else{
+                $prodottoFiltrato =[];
                 foreach($products as $product){
                     if($product['prod'] === $prod){
                         $prodottoFiltrato[]=$product;
                     }
                 }
+            }       
             
         } else{
             $prodottoFiltrato = $products;
